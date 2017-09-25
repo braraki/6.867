@@ -13,7 +13,7 @@ hs = [];
 for i = 1:11
     h = 10^(i-8);
     hs = [h; hs];
-    meanv = central_diff_analysis(grad, f, solution, func_name, h);
+    meanv = central_diff_analysis(grad, f, solution, func_name, vpa(h,32), h);
     means = [meanv; means];
 end
 

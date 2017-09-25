@@ -11,9 +11,9 @@ func_name = 'quadBowl';
 means = [];
 hs = [];
 for i = 1:10
-    h = 10^(i-20);
+    h = 10^(i-10)
     hs = [h; hs];
-    meanv = central_diff_analysis(grad, f, solution, func_name, h);
+    meanv = central_diff_analysis(grad, f, solution, func_name, vpa(h, 32), h);
     means = [meanv; means];
 end
 

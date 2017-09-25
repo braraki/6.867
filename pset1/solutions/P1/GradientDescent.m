@@ -3,7 +3,7 @@ classdef GradientDescent
     methods(Static)
         %% stochastic gradient descent
         function [ cur_theta, previous_step_size ] = sgd( grad, cur_theta, i )
-            step_size = (12000000 + i)^-0.7;
+            step_size = (500000 + i)^-0.95;
 
             prev_theta = cur_theta;
             gradient = grad(cur_theta);
